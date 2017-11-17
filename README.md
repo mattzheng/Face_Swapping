@@ -3,8 +3,8 @@
 简单换脸、人脸对齐、关键点定位与画图
 
 这是一个利用dlib进行关键点定位 + opencv处理的人脸对齐、换脸、关键点识别的小demo。原文来自于[《Switching Eds: Face swapping with Python, dlib, and OpenCV》](https://matthewearl.github.io/2015/07/28/switching-eds-with-python/)
-该博文的[github](https://github.com/matthewearl/faceswap/blob/master/faceswap.py)地址中有所有的code。这边我将我抽取的code放在自己的github之中，可以来这下载:
-https://github.com/mattzheng/Face_Swapping
+该博文的[github](https://github.com/matthewearl/faceswap/blob/master/faceswap.py)地址中有所有的code。这边我的博客地址：
+http://blog.csdn.net/sinat_26917383/article/details/78564416
 
 有人将其进行[中文翻译](http://python.jobbole.com/82546/)也有将其进行一定改编有以下两个案例：
 
@@ -146,9 +146,8 @@ matrix([[   0.62876962,    0.20978991, -101.32973923],
  - warped_mask ,warp_im函数，将 im2 的掩码进行变化，使之与 im1 相符,跟上面的mask张一样（一个鼻子）
  - combined_mask ，将二者的掩码进行连通（跟warped_mask 长一样）
  - warped_im2 ，warp_im函数，第二次，将第二幅图像调整到与第一幅图像相符（对齐图片,斜了点）
-![这里写图片描述](http://img.blog.csdn.net/20171117184429306?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMjY5MTczODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
  - warped_corrected_im2 ，correct_colours函数，将 im2 的皮肤颜色进行修正，使其和 im1 的颜色尽量协调（类似下图）
- ![这里写图片描述](http://img.blog.csdn.net/20171117184614032?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMjY5MTczODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
  - output_im  组合图像，获得结果
 
 实践：
